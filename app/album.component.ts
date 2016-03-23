@@ -6,15 +6,20 @@ import { Album } from './album.model';
   inputs: ['album'],
 template:`
   <div>
-  <input *ngIf="album.done" type="checkbox" checked (click)="toggleDone(false)"/>
-  <input *ngIf="!album.done" type="checkbox" (click)="toggleDone(true)"/>
+  <input *ngIf="album.checkedOut" type="checkbox" checked (click)="addToInventory()"/>
+  <input *ngIf="!album.checkedOut" type="checkbox" (click)="addToCheckout()"/>
   <label>{{album.description}}</label>
 `
 })
 
 export class AlbumComponent {
  public album: Album;
- toggleDone(setState: boolean){
- this.album.done = setState;
- }
+   addToCheckout() {
+     this.album.checkedOut = true;
+          console.log(this.album);
+   }
+   addToInventory() {
+     this.album.checkedOut = false;
+          console.log(this.album);
+   }
  }

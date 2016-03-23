@@ -64,7 +64,7 @@ gulp.task('jsBower', ['jsBowerClean'], function(){
 });
 
 gulp.task('cssBowerClean', function(){
-  return del(['./build/css/'])
+  return del(['./build/css/']);
 });
 
 gulp.task('cssBower', ['cssBowerClean'], function() {
