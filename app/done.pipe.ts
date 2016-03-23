@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from 'angular2/core';
-import {Album } from './ablum.model';
+import {Album} from './album.model';
 
 @Pipe ({
   name: "done",
-  pure: true
+  pure: false
 })
 
 export class DonePipe implements PipeTransform {
@@ -11,7 +11,7 @@ export class DonePipe implements PipeTransform {
     console.log('selected album ', args[1]);
     var desiredDoneState = args[0];
     if(desiredDoneState === "done") {
-      return input.filter((task) => {
+      return input.filter((album) => {
         return !album.done;
       });
     } else {

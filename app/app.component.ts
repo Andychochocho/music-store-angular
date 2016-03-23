@@ -20,9 +20,9 @@ export class AppComponent {
   public albums: Album[];
   constructor() {
     this.albums = [
-      new Album("Mothers Milk", "Red Hot Chili Peppers", 29.99),
-      new Album("Californiacation", "Red Hot Chili Peppers", 17.75),
-      new Album("Stadium Arcadium", "Red Hot Chili Peppers", 42.49),
+      new Album("Mothers Milk", 29.99),
+      new Album("Californiacation", 17.75),
+      new Album("Stadium Arcadium", 42.49),
     ];
   }
   albumWasSelected(clickedAlbum: Album): void {

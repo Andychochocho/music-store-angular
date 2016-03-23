@@ -17,3 +17,4 @@ export class AlbumComponent {
  toggleDone(setState: boolean){
  this.album.done = setState;
  }
+ }
