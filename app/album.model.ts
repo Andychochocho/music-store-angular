@@ -1,6 +1,6 @@
 export class Album {
   public checkedOut: boolean = false;
-  constructor(public description: string, public id: number) {
-
+  public cart: boolean = false;
+  constructor(public description: string, public price: number, public totalPrice: number = 0) {
   }
 }
