@@ -19,6 +19,7 @@ export class CartTotalComponent {
         total += this.albumList[i].price;
       }
     }
+
     console.log(total);
     return total;
   }
